@@ -65,6 +65,9 @@ require("lazy").setup({
 	-- Debugger
 	require("plugins.debug"),
 
+	-- AI integreation
+	require("plugins.avante"),
+
 	-- Auto completion
 	require("plugins.autocompletion"),
 
