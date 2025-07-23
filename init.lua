@@ -65,6 +65,9 @@ require("lazy").setup({
 	-- Debugger
 	require("plugins.debug"),
 
+	-- Code campanion
+	require("plugins.codecompanion"),
+
 	-- Auto completion
 	require("plugins.autocompletion"),
 
