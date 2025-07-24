@@ -21,6 +21,7 @@ A deliciously configured Neovim setup that transforms your editor into a powerfu
 ## 📦 Included Plugins
 
 ### Core Functionality
+
 - **lazy.nvim** - Plugin manager
 - **telescope.nvim** - Fuzzy finder
 - **neo-tree.nvim** - File explorer
@@ -29,12 +30,14 @@ A deliciously configured Neovim setup that transforms your editor into a powerfu
 - **nvim-cmp** - Auto-completion
 
 ### UI Enhancement
+
 - **alpha-nvim** - Custom dashboard
 - **bufferline.nvim** - Buffer tabs
 - **lualine.nvim** - Status line
 - **indent-blankline.nvim** - Indentation guides
 
 ### Development Tools
+
 - **nvim-dap** - Debug Adapter Protocol
 - **none-ls.nvim** - Formatting and linting
 - **gitsigns.nvim** - Git integration
@@ -113,6 +116,7 @@ cp lazy-lock.json ~/.config/nvim/
 ## ⌨️ Key Bindings
 
 ### General
+
 - `<leader>` = `Space`
 - `<leader>ff` - Find files
 - `<leader>fg` - Live grep
@@ -120,38 +124,24 @@ cp lazy-lock.json ~/.config/nvim/
 - `<leader>fh` - Help tags
 
 ### File Navigation
+
 - `<leader>e` - Toggle file explorer
 - `<C-h/j/k/l>` - Navigate splits
 - `<leader>bd` - Close buffer
 
 ### Git
+
 - `<leader>gg` - Open LazyGit
 - `]c` / `[c` - Next/previous git hunk
 
 ### LSP
+
 - `gd` - Go to definition
 - `gr` - Go to references
 - `K` - Hover documentation
 - `<leader>ca` - Code actions
 
-*For a complete list of keybindings, see `lua/core/keymaps.lua`*
-
-## 🎨 Screenshots
-
-### Dashboard
-![Dashboard](./images/dashboard.png)
-
-### Code Editing
-![Code Editing](./images/coding.png)
-
-### File Explorer
-![File Explorer](./images/file-explorer.png)
-
-### Telescope Finder
-![Telescope](./images/telescope.png)
-
-### Git Integration
-![Git Integration](./images/git.png)
+_For a complete list of keybindings, see `lua/core/keymaps.lua`_
 
 ## 🛠️ Customization
 
@@ -193,17 +183,5 @@ Edit `lua/plugins/colortheme.lua` to use a different theme.
 ## 🤝 Contributing
 
 Feel free to fork this configuration and make it your own! If you have improvements or bug fixes, pull requests are welcome.
-
-## 📄 License
-
-This configuration is provided as-is for educational and personal use.
-
-## 🙏 Acknowledgments
-
-- [lazy.nvim](https://github.com/folke/lazy.nvim) - Amazing plugin manager
-- [Neovim](https://neovim.io/) - The editor that makes it all possible
-- All the plugin authors who create these fantastic tools
-
----
 
 **Happy coding with Tastic Rice! 🍚✨**
