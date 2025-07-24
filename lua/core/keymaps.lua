@@ -80,6 +80,6 @@ vim.keymap.set('n', ']d', function()
   vim.diagnostic.jump { count = 1, float = true }
 end, { desc = 'Go to next diagnostic message' })
 
-vim.keymap.set('n', '<leader>d', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
-vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
+vim.keymap.set('n', '<leader>df', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
+vim.keymap.set('n', '<leader>dq', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
 

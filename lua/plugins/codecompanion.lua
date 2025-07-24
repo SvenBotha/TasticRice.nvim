@@ -72,7 +72,7 @@ return {
 			"<cmd>CodeCompanionChat Toggle<cr>",
 			{ desc = "Toggle CodeCompanion Chat" }
 		)
-		vim.keymap.set("v", "<Leader>ca", "<cmd>CodeCompanionChat Add<cr>", { desc = "Add selection to chat" })
+		vim.keymap.set("v", "<Leader>cad", "<cmd>CodeCompanionChat Add<cr>", { desc = "Add selection to chat" })
 		vim.keymap.set("n", "<Leader>ci", "<cmd>CodeCompanionChat<cr>", { desc = "Inline CodeCompanion" })
 		vim.keymap.set("n", "<Leader>cl", "<cmd>CodeCompanionCmd<cr>", { desc = "CodeCompanion Command" })
 
@@ -95,41 +95,19 @@ return {
 
 		-- If which-key is available, register the mappings with descriptions
 		if wk_ok then
-			wk.register({
-				["<leader>c"] = {
-					name = "CodeCompanion",
-					c = { "<cmd>CodeCompanionActions<cr>", "Actions" },
-					h = { "<cmd>CodeCompanionChat Toggle<cr>", "Toggle Chat" },
-					a = { "<cmd>CodeCompanionChat Add<cr>", "Add to Chat", mode = "v" },
-					i = { "<cmd>CodeCompanionChat<cr>", "Inline Chat" },
-					l = { "<cmd>CodeCompanionCmd<cr>", "Command" },
-					p = {
-						function()
-							require("codecompanion").prompt("explain")
-						end,
-						"Explain Code",
-					},
-					e = {
-						function()
-							require("codecompanion").prompt("explain")
-						end,
-						"Explain Selection",
-						mode = "v",
-					},
-					f = {
-						function()
-							require("codecompanion").prompt("fix")
-						end,
-						"Fix Code",
-						mode = "v",
-					},
-					o = {
-						function()
-							require("codecompanion").prompt("optimize")
-						end,
-						"Optimize Code",
-						mode = "v",
-					},
+			wk.add({
+				{ "<leader>c", group = "CodeCompanion" },
+				{ "<leader>cc", "<cmd>CodeCompanionActions<cr>", desc = "Actions" },
+				{ "<leader>ch", "<cmd>CodeCompanionChat Toggle<cr>", desc = "Toggle Chat" },
+				{ "<leader>ci", "<cmd>CodeCompanionChat<cr>", desc = "Inline Chat" },
+				{ "<leader>cl", "<cmd>CodeCompanionCmd<cr>", desc = "Command" },
+				{ "<leader>cp", function() require("codecompanion").prompt("explain") end, desc = "Explain Code" },
+				{
+					mode = { "v" },
+					{ "<leader>cad", "<cmd>CodeCompanionChat Add<cr>", desc = "Add to Chat" },
+					{ "<leader>ce", function() require("codecompanion").prompt("explain") end, desc = "Explain Selection" },
+					{ "<leader>cf", function() require("codecompanion").prompt("fix") end, desc = "Fix Code" },
+					{ "<leader>co", function() require("codecompanion").prompt("optimize") end, desc = "Optimize Code" },
 				},
 			})
 		end

@@ -74,4 +74,7 @@ require("lazy").setup({
 	-- LSP and Formatting
 	require("plugins.none-ls"),
 	require("plugins.lsp"),
+
+	-- Markdown preview
+	require("plugins.markdown-preview"),
 })
